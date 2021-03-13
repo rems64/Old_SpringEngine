@@ -42,16 +42,14 @@ void SE::DebugUILayer::onImGuiRender()
 	if (currentTime - m_lastHistogramUpdate >= 0.1)
 	{
 
-		//int n = sizeof(my_values) / sizeof(my_values[0]);
 		left_rotate_by_one(m_frameRateOverTime, 50);
 		m_frameRateOverTime[49] = Application::get().getFPS();
 
 		m_lastHistogramUpdate = currentTime;
-		m_frameRateOverTime[0] = 0;
 	}
 
 	ImGui::Begin("Stats");
 	ImGui::Text("Framerate");
-	ImGui::PlotHistogram("Frame Times", m_frameRateOverTime, 50);
+	ImGui::PlotLines("Frame Times", m_frameRateOverTime, 50, 0, 0, 0);
 	ImGui::End();
 }
