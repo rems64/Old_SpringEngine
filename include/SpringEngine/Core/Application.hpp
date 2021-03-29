@@ -10,6 +10,10 @@
 #include <SpringEngine/Core/Layer.hpp>
 #include <SpringEngine/Core/LayerStack.hpp>
 #include <SpringEngine/Layers/ImGuiLayer.hpp>
+#include <SpringEngine/Layers/WorldLayer.hpp>
+#include <SpringEngine/Graphics/Renderer.hpp>
+#include <SpringEngine/Core/SceneElement.hpp>
+#include <SpringEngine/Core/DataManager.hpp>
 
 
 namespace SE
@@ -33,9 +37,6 @@ namespace SE
 		void pushOverlay(Layer* layer);
 
 		bool onWindowCloseEvent(WindowCloseEvent& event);
-		bool onMouseMove(MouseMove& event);
-		bool onMousePressed(MousePressed& event);
-		bool onMouseReleased(MouseReleased& event);
 
 		double getFPS();
 
@@ -50,5 +51,7 @@ namespace SE
 
 		LayerStack m_layerStack;
 		ImGuiLayer* m_imGuiLayer;
+		WorldLayer* m_worldLayer;
+		DataManager* m_dataManager;
 	};
 };
