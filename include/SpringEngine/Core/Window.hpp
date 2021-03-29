@@ -43,7 +43,7 @@ namespace SE
 		void* getNativeWindow() { return m_window; };
 
 		using EventCallbackFunction = std::function<void(SE::Event&)>;
-		inline void setEventCallback(const EventCallbackFunction& clbk) { m_data.m_eventCallback = clbk; SE_CORE_WARN("Updated callback"); };
+		inline void setEventCallback(const EventCallbackFunction& clbk) { m_data.m_eventCallback = clbk; };
 	private:
 		GLFWwindow* m_window;
 

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <initializer_list>
+
 namespace SE
 {
 	template <typename T>
@@ -7,6 +9,7 @@ namespace SE
 	{
 	public:
 		Vector3() : m_x(0), m_y(0), m_z(0) {};
+		//Vector3(std::initializer_list<T> initList) : m_x(initList[0]), m_y(initList[1]), m_z(initList[2]) {};
 		Vector3(T x, T y, T z) : m_x(x), m_y(y), m_z(z) {};
 		template <typename U>
 		Vector3(const Vector3<U>& src) : m_x(static_cast<T>(src.m_x)), m_y(static_cast<T>(src.m_y)), m_z(static_cast<T>(src.m_z)) {};

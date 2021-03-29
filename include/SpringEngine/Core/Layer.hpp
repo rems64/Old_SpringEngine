@@ -17,7 +17,7 @@ namespace SE
 		virtual void onDetach() {}
 		virtual void onAttach() {}
 
-		virtual void onUpdate() {}
+		virtual void onUpdate(double deltaTime) {}
 
 		virtual void onImGuiRender() {}
 

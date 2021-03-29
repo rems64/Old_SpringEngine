@@ -12,7 +12,7 @@ void SE::Log::init()
 	sm_appLogger = spdlog::stdout_color_mt("APP");
 	sm_appLogger->set_level(spdlog::level::trace);
 
-	SE_CORE_INFO("Logger initialized");
+	SE_CORE_WARN("Logger initialized");
 }
 
 void SE::Log::setCoreLogLevel(SE::LOG_LVL logLevel)

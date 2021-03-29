@@ -11,12 +11,12 @@ SE::DebugUILayer::DebugUILayer(const char* name) : Layer(name), m_lastHistogramU
 
 void SE::DebugUILayer::onAttach()
 {
-	SE_CORE_INFO("Attaching Debug UI layer {}", m_name);
+	//SE_CORE_INFO("Attaching Debug UI layer {}", m_name);
 }
 
 void SE::DebugUILayer::onDetach()
 {
-	SE_CORE_INFO("Detaching Debug UI layer {}", m_name);
+	//SE_CORE_INFO("Detaching Debug UI layer {}", m_name);
 }
 
 void SE::DebugUILayer::onEvent(Event& event)

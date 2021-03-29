@@ -8,3 +8,5 @@
 #include <SpringEngine/Core/Vector2.hpp>
 #include <SpringEngine/Layers/TestLayer.hpp>
 #include <SpringEngine/Layers/DebugUILayer.hpp>
+#include <SpringEngine/Core/SceneElement.hpp>
+#include <SpringEngine/Graphics/Renderer.hpp>

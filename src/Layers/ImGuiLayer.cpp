@@ -17,7 +17,7 @@ void SE::ImGuiLayer::onAttach()
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO();
 	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+	//io.ConfigFlags |= ImGuiConfigFlags_DockingEnabled;
 
 	//ImGui::StyleColorsDark();
 
@@ -26,7 +26,7 @@ void SE::ImGuiLayer::onAttach()
 
 	ImGui_ImplGlfw_InitForOpenGL(window, true);
 	//const char* v = (const char*)glGetIntegerv(GL_VERSION);
-	SE_CORE_INFO("temp {}", glGetString(GL_VERSION));
+	SE_CORE_INFO("ImGui layer running on renderer {0}", glGetString(GL_VERSION));
 	ImGui_ImplOpenGL3_Init("#version 410");
 	//ImGui_ImplOpenGL3_Init();
 

@@ -116,7 +116,7 @@ glm::vec2 SE::Window::getPosition()
 void SE::Window::setVSync(bool set)
 {
 	m_data.m_VSync = set;
-	glfwSwapInterval(set ? 0 : 1);
+	glfwSwapInterval(set ? 1 : 0);
 }
 
 bool SE::Window::shouldClose()
